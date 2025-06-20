@@ -12,6 +12,10 @@ Accurately predict the market price of a house based on numerical features like 
 Be interpretable, easy to update, and usable by non-technical users via manual input.
 
 🧠 Key Concepts and Pipeline
+
+
+
+
 1. Loading and Exploring the Dataset
 The dataset is imported using pandas.read_csv().
 
@@ -20,14 +24,24 @@ Initial rows are displayed to understand the structure of the dataset.
 Summary statistics (df.describe()) and missing value checks (df.isnull().sum()) help understand the quality of data.
 
 📌 Why important?
+
+
+
+
 This ensures data integrity and lets us clean or preprocess columns appropriately before training the model.
 
 2. Data Cleaning and Correlation
+
+
 Missing rows are removed using df.dropna() to avoid issues during training.
 
 Correlation analysis is performed on numerical columns using df.select_dtypes(include='number').corr() and visualized via seaborn.heatmap.
 
 📌 Why important?
+
+
+
+
 Correlation heatmaps help identify the most influential features on the house price (e.g., area might be positively correlated, while age might be negatively correlated).
 
 3. Feature and Target Selection
@@ -40,6 +54,10 @@ y: Target variable (Price or equivalent)
 Only numeric features are used to ensure compatibility with Linear Regression.
 
 📌 Why important?
+
+
+
+
 Models can't train on text or categorical values without encoding. Selecting only relevant, clean features increases accuracy and stability.
 
 4. Model Training
@@ -48,6 +66,11 @@ The data is split into training and testing sets (e.g., 80% training, 20% testin
 A Linear Regression model is trained using model.fit() from scikit-learn.
 
 📌 Why Linear Regression?
+
+
+
+
+
 It is one of the simplest and most interpretable models, ideal for understanding relationships in structured data and quickly evaluating performance.
 
 5. Evaluation Metrics
@@ -58,6 +81,10 @@ Mean Squared Error (MSE): Measures average squared difference between predicted 
 R² Score: Tells how well the independent variables explain the variability in the target variable.
 
 📌 Why important?
+
+
+
+
 These metrics let us quantify how accurate our model is. A high R² and low MSE means good performance.
 
 6. Prediction on User Input
@@ -68,12 +95,20 @@ A DataFrame is created with this input and used for prediction.
 The predicted price is printed in a user-friendly format.
 
 📌 Why important?
+
+
+
+
 This makes the project interactive and practical — a potential base for web apps, dashboards, or real estate tools.
 
 7. Visualization
 A scatter plot compares actual vs. predicted values to visualize prediction accuracy.
 
 📌 Why important?
+
+
+
+
 You can visually inspect if predictions align well with true prices or if the model consistently over- or under-estimates.
 
 🛠 Libraries Used
@@ -85,6 +120,10 @@ sklearn.metrics	Model evaluation (MSE, R²)
 sklearn.model_selection	Train-test split
 
 🚀 Future Work & Enhancements
+
+
+
+
 ✅ Add date feature extraction (e.g., year built, sold).
 
 ✅ Handle categorical features (e.g., location, building type) via One-Hot Encoding.
@@ -95,8 +134,11 @@ sklearn.model_selection	Train-test split
 
 ✅ Add automated hyperparameter tuning using GridSearchCV.
 
-📸 Screenshots (optional)
-Include screenshots of:
+
+
+
+
+
 
 Correlation heatmap
 
