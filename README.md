@@ -140,11 +140,17 @@ sklearn.model_selection	Train-test split
 
 
 
+
+
+
 Correlation heatmap
 
 Actual vs. Predicted scatter plot
 
 Terminal prompt for user input & prediction
+
+
+
 
 📂 Folder Structure (Example)
 bash
